@@ -14,7 +14,6 @@ def create_partitions(data_dir, output_dir):
 
         images = os.listdir(class_dir)
         # Simple split logic (matches your notebook: 50/25/25 approx)
-        # You can make this smarter e.g. random shuffle, stratified sampling, etc.
         for i, img_name in enumerate(images):
             img_path = os.path.join(cls, img_name) # Relative path
             if i < 50:
@@ -33,7 +32,10 @@ def create_partitions(data_dir, output_dir):
         print(f"Saved {partition_name}.csv with {len(df)} images.")
 
 if __name__ == "__main__":
-    # Default assumes running from project root
+    # Default paths updated to match your folder structure: data/raw/rawPartitions
+    # This assumes you run the script from the project root folder
     raw_data_path = os.path.join("data", "raw")
-    csv_output_path = os.path.join("data", "partitions")
+    csv_output_path = os.path.join("data", "raw", "rawPartitions") 
+    
+    print(f"Generating partitions from {raw_data_path} to {csv_output_path}...")
     create_partitions(raw_data_path, csv_output_path)
