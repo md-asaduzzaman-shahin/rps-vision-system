@@ -59,7 +59,7 @@ if __name__ == "__main__":
     
     # Default to saving in data/raw
     # Assumes script is run from project root
-    base_dir = os.path.join("data", "raw") 
+    base_dir = os.path.join("data", "webcam") 
     
     print(f"Images will be saved to: {base_dir}")
     

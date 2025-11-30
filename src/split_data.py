@@ -34,8 +34,8 @@ def create_partitions(data_dir, output_dir):
 if __name__ == "__main__":
     # Default paths updated to match your folder structure: data/raw/rawPartitions
     # This assumes you run the script from the project root folder
-    raw_data_path = os.path.join("data", "raw")
-    csv_output_path = os.path.join("data", "raw", "rawPartitions") 
+    raw_data_path = os.path.join("data", "webcam")
+    csv_output_path = os.path.join("data", "webcam", "webcamPartitions") 
     
     print(f"Generating partitions from {raw_data_path} to {csv_output_path}...")
     create_partitions(raw_data_path, csv_output_path)
